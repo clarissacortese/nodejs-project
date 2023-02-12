@@ -75,7 +75,7 @@ Do a **POST** request to localhost:3000/orders
 ## Contacts
 
 [Email me](mailto:clarissacortese.info@gmail.com) <br>
-[Portfolio](https://clarissacortese.com/)
-[LinkedIn](https://linkedin.com/in/clarissacortese/)
-[GitHub Profile](https://github.com/clarissacortese/)
+[Portfolio](https://clarissacortese.com/) <br>
+[LinkedIn](https://linkedin.com/in/clarissacortese/) <br>
+[GitHub Profile](https://github.com/clarissacortese/) <br>
 [GitHub Repository](https://github.com/clarissacortese/nodejs-project)
