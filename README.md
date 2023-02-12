@@ -52,7 +52,7 @@ Do a **POST** request to localhost:3000/orders
 }
 ```
 
--**How to view users, products and orders:**<br>
+- **How to view users, products and orders:**<br>
   Do a **GET** request to localhost:3000/users or localhost:3000/products or localhost:3000/orders<br>
   If you want to view a specific user, product or order, do a **GET** request to localhost:3000/users/id or localhost:3000/products/id or localhost:3000/orders/id<br>
 
