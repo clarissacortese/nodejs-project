@@ -19,7 +19,7 @@ const order_get_id = async (req, res) => {
   try {
     const order = await Order.findById(req.params.orderId);
     if (order == null) {
-      res.status(404).jso({ message: "Order not found" });
+      res.status(404).json({ message: "Order not found" });
     } else {
       res.status(200).json(order);
     }
@@ -27,6 +27,7 @@ const order_get_id = async (req, res) => {
     res.status(404).json({ message: error.message });
   }
 };
+
 
 // Create New Order
 
