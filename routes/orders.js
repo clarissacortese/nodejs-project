@@ -2,9 +2,21 @@ const express = require("express");
 const router = express.Router();
 const ordersController = require("../controllers/ordersController");
 
-// Get All Orders
+// Get All Orders (from the most recent)
 
 router.get("/", ordersController.order_get_all);
+
+// Get all orders by Product ID
+
+router.get("/product", ordersController.orders_by_product);
+
+// Get All Orders by Date
+
+router.get("/date", ordersController.orders_by_date);
+
+// Get All Orders by User ID
+
+router.get("/user", ordersController.orders_by_user);
 
 // Get Order By ID
 

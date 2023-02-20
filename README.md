@@ -1,12 +1,10 @@
 # nodejs-project
 
-
 ## About
 
 For the Node.js project of [start2impact](https://www.start2impact.it)'s 'Full Stack Development' Master's course, I have developed custom RESTful APIs for an imaginary web product shop, 'Planty of Food' (POF). <br>
 
 You can manage, create, edit and delete users, products and orders as if you were an administrator.
-
 
 ## How to use it
 
@@ -53,15 +51,17 @@ Do a **POST** request to localhost:3000/orders
 ```
 
 - **How to view users, products and orders:**<br>
-  Do a **GET** request to localhost:3000/users or localhost:3000/products or localhost:3000/orders<br>
+  Do a **GET** request to localhost:3000/users or localhost:3000/products or localhost:3000/orders, you will get results sorted by most recent<br>
   If you want to view a specific user, product or order, do a **GET** request to localhost:3000/users/id or localhost:3000/products/id or localhost:3000/orders/id<br>
+
+- **How to get orders by date, product or user:**<br>
+  Do a **GET** request to localhost:3000/orders/date?date=chosendate, localhost:3000/orders/user?user=chosenuserid or localhost:3000/orders/product?product=chosenproductid<br>
 
 - **How to update users, products and orders:** <br>
   Do a **PATCH** request to localhost:3000/users/id or localhost:3000/products/id or localhost:3000/orders/id<br>
- 
+
 - **How to delete users, products and orders:** <br>
   Do a **DELETE** request to localhost:3000/users/id or localhost:3000/products/id or localhost:3000/orders/id<br>
-
 
 ## Resources
 
@@ -70,7 +70,6 @@ Do a **POST** request to localhost:3000/orders
 - **Express**
 - **Mongoose**
 - **Postman**
-
 
 ## Contacts
 

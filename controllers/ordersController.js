@@ -2,11 +2,48 @@ const Product = require("../models/Product");
 const User = require("../models/User");
 const Order = require("../models/Order");
 
-// Get All Orders
+// Get All Orders (from the most recent)
 
 const order_get_all = async (req, res) => {
   try {
     const ordersList = await Order.find().sort({ creationDate: -1 });
+    res.status(200).json(ordersList);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// Get All Orders by Date
+
+const orders_by_date = async (req, res) => {
+  try {
+    const ordersList = await Order.find({ creationDate: req.query.date });
+    res.status(200).json(ordersList);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// Get All Orders by Product ID
+
+const orders_by_product = async (req, res) => {
+  try {
+    const ordersList = await Order.find({ productId: req.query.product }).sort({
+      creationDate: -1,
+    });
+    res.status(200).json(ordersList);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// Get All Orders by User ID
+
+const orders_by_user = async (req, res) => {
+  try {
+    const ordersList = await Order.find({ userId: req.query.user }).sort({
+      creationDate: -1,
+    });
     res.status(200).json(ordersList);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -27,7 +64,6 @@ const order_get_id = async (req, res) => {
     res.status(404).json({ message: error.message });
   }
 };
-
 
 // Create New Order
 
@@ -140,4 +176,7 @@ module.exports = {
   order_post,
   order_patch,
   order_delete,
+  orders_by_product,
+  orders_by_date,
+  orders_by_user,
 };
